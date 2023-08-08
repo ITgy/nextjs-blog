@@ -1,6 +1,6 @@
 ---
 title: 'When to Use Static Generation v.s. Server-side Rendering'
-tag: '技术'
+tag: '技术2'
 date: '2020-01-02'
 ---
 

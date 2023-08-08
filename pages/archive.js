@@ -41,7 +41,7 @@ export default function Archive({ archiveData }) {
             <Head>
                 <title>归档</title>
             </Head>
-            <h1>归档</h1>
+            <h1 className={utilStyles.textCenter}>归档</h1>
             {archiveLayout}
         </Layout>
     )

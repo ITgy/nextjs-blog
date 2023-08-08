@@ -1,6 +1,6 @@
 ---
 title: 'Two Forms of Pre-rendering'
-tag: '技术'
+tag: '技术1'
 date: '2020-01-01'
 ---
 

@@ -1,15 +1,15 @@
 import styles from './tag.module.css';
 
-export default function Tag({content, indicte}){
+export default function Tag({tagInfo={}, className='', onSelect}){
     const style1 = {
         background: "linear-gradient(to right, #FFEBCC, #FFDF9E)",
         color: "#CF8910"
     }
     const style2 = {
-        background: "linear-gradient(to right, #76aff2, #0070f3)",
-        color: "#CF8910"
+        background: "linear-gradient(to right, #bbdaff, #3692ff)",
+        color: "#0070f3"
     }
     return (
-        <div className={`${styles.tagName}`} style={indicte?style1:style2}>{content}</div>
+        <div className={`${styles.tagName} ${className}`} onClick={()=>{onSelect(tagInfo)}} style={tagInfo.indicte?style2:style1}>{tagInfo.tagName}</div>
     )
 }

@@ -1,16 +1,8 @@
 .tagName {
-    background: linear-gradient(to right, #FFEBCC, #FFDF9E);
     display: inline-block;
     font-size: 14px;
-    color: #CF8910;
-    padding: 5px 10px;
-    border-radius: 5px 0 5px 0;
-
-}
-
-.lineClamp1 {
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 1;
+    /* color: #CF8910; */
+    padding: 2px 7px;
+    border-radius: 10px 0 10px 0;
+    cursor: pointer;
 }
