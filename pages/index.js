@@ -16,16 +16,17 @@ export async function getStaticProps(){
 }
 
 export default function Home({allPostsData}) {
+
   const list = [{
     id: 1,
     label: "归档",
-    num: 1,
-    url: '/'
+    num: allPostsData.filter(item => item.date).length,
+    url: '/archive'
   }, {
     id: 2,
-    label: "分类",
-    num: 1,
-    url: '/'
+    label: "标签",
+    num: allPostsData.filter(item => item.tag).length,
+    url: '/tag'
   }, {
     id: 3,
     label: "关于",
@@ -40,10 +41,7 @@ export default function Home({allPostsData}) {
       <Tabbar list={list}></Tabbar>
 
       <section className={utilStyles.headingMd}>
-        <p>你好，欢迎来到我的世界：</p>
-        <p>
-          太用力的人跑不远，慢下来，其实沿途的风景也很美丽
-        </p>
+        <p>近期愿望：简单生活，早睡早起。</p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>

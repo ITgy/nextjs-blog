@@ -5,7 +5,7 @@
     font-size: 20px;
     font-weight: 600;
     margin: 20px 0;
-    color: #0070f3;
+    color: #3e3e3e;
 }
 .li {
     cursor: pointer;
@@ -15,5 +15,5 @@
     margin-left: 20px;
 }
 .li:hover {
-    border-bottom: 2px solid #0070f3;
+    border-bottom: 2px solid #3e3e3e;
 }
