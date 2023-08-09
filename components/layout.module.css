@@ -14,7 +14,7 @@
 .main {
   height: calc(100vh - 5rem);
   padding-top: 3rem;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .headerImage {
