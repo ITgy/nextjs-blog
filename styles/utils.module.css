@@ -54,3 +54,7 @@
 .textCenter {
   text-align: center;
 }
+
+.scroll{
+  overflow: auto;
+}

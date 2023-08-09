@@ -2,13 +2,28 @@ import Head from 'next/head';
 import styles from './layout.module.css';
 import Link from 'next/link';
 import Avatar from './avatar/index';
+import {useRef, useState} from 'react';
 
 const name = 'Fire';
 export const siteTitle = 'What can you find in this place';
 
 export default function Layout({ children, home }) {
+    const mainObj = useRef(null);
+    const [showToTop, setShowToTop] = useState(false);
+
+    function handleToTop(){
+        mainObj.current.scrollTo(0, 0)
+    }
+    function handleScroll(event){
+        if(event.target.scrollTop > 100){
+            setShowToTop(true)
+        } else {
+            setShowToTop(false)
+        }
+    }
+
     return (
-        <div className={styles.container}>
+        <div className={`${styles.container}`}>
             <Head>
                 <link rel="icon" href="/favicon.ico"></link>
                 <meta name="description" content="Learn how to build a personal website using Next.js"></meta>
@@ -29,12 +44,13 @@ export default function Layout({ children, home }) {
                     </>
                 )}
             </header>
-            <main>{children}</main>
+            <main ref={mainObj} onScroll={handleScroll} className={styles.main}>{children}</main>
             {!home && (
                 <div className={styles.backToHome}>
                     <Link href="/">
                         <a>← Back to home</a>
                     </Link>
+                    {showToTop && <a className={styles.GoToTop} onClick={handleToTop}>↑ Go to top</a>}
                 </div>
             )}
         </div>

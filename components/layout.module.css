@@ -1,13 +1,20 @@
 .container {
   max-width: 36rem;
+  height: 100vh;
   padding: 0 1rem;
-  margin: 3rem auto 6rem;
+  margin: 0 auto;
 }
 
 .header {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.main {
+  height: calc(100vh - 5rem);
+  padding-top: 3rem;
+  overflow-y: scroll;
 }
 
 .headerImage {
@@ -21,5 +28,11 @@
 }
 
 .backToHome {
-  margin: 3rem 0 0;
+  margin: 1rem 0 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.GoToTop {
+  cursor: pointer;
 }

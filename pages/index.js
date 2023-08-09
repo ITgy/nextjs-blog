@@ -31,7 +31,7 @@ export default function Home({allPostsData}) {
     id: 3,
     label: "关于",
     num: 0,
-    url: '/'
+    url: '/aboutMe'
   }];
   return (
     <Layout home>
