@@ -26,7 +26,7 @@ jobs:
           git config user.email "muugyj@outlook.com"
           git config user.name "ITgy"
           git checkout gh-pages
-          git rm -rf.
+          git rm -rf .
           cp -r ../out/* .
           git add .
           git commit -m "Deploy to gh-pages"
