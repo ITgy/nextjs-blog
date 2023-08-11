@@ -19,7 +19,7 @@ export default function Home({allPostsData}) {
 
   const list = [{
     id: 1,
-    label: "归档",
+    label: "归档1",
     num: allPostsData.filter(item => item.date).length,
     url: '/archive'
   }, {
