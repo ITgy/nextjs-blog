@@ -1,6 +1,13 @@
+const isProduct = process.env.cENV === 'product'
+
+console.log('isProduct',isProduct)
+
 module.exports = {
-    basePath: '/blog-deploy',
-    assetPrefix: '/blog-deploy/',
+    basePath: isProduct ? '/blog-deploy' : '',
+    assetPrefix: isProduct ? '/blog-deploy/' : '',
+    env: {
+        isProduct
+    },
     experimental: {
         newNextLinkBehavior: false
     }

@@ -1,8 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build && next export && touch out/.nojekyll",
+    "dev": "cENV=develop next dev",
+    "build": "cENV=product next build && next export && touch out/.nojekyll",
     "start": "next start"
   },
   "dependencies": {

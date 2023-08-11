@@ -1,7 +1,7 @@
 import styles from './picture.module.css';
 import {useState, useEffect} from 'react';
 
-export default function Picture({clientX, clientY, bgWidth = 175, bgHeight = 250, width=175, height=300,className = ''}) {
+export default function Picture({url='/images/avatar2.png', clientX, clientY, bgWidth = 175, bgHeight = 250, width=175, height=300,className = ''}) {
     const baseBgStyle = {
         width: `${bgWidth}px`,
         height: `${bgHeight}px`
@@ -44,7 +44,7 @@ export default function Picture({clientX, clientY, bgWidth = 175, bgHeight = 250
 
     return (
         <div style={rotateObj} className={`${styles.card} ${className}`}>
-            <img className={styles.img} style={imgStyle} src="/images/avatar2.png"></img>
+            <img className={styles.img} style={imgStyle} src={`${process.env.isProduct?'/blog-deploy':''}${url}`}></img>
         </div>
     )
 }
