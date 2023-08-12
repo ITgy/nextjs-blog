@@ -44,7 +44,7 @@ export default function Picture({url='/images/avatar2.png', clientX, clientY, bg
 
     return (
         <div style={rotateObj} className={`${styles.card} ${className}`}>
-            <img className={styles.img} style={imgStyle} src={`${process.env.isProduct?'/blog-deploy':''}${url}`}></img>
+            <img className={styles.img} style={imgStyle} src={`${process.env.isProduct?'/nextjs-blog':''}${url}`}></img>
         </div>
     )
 }
