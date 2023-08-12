@@ -1,8 +1,9 @@
 import styles from './picture.module.css';
 import {useState, useEffect} from 'react';
 
-export default function Picture({url='/images/avatar2.png', clientX, clientY, bgWidth = 175, bgHeight = 250, width=175, height=300,className = ''}) {
+export default function Picture({url='/images/avatar2.png', bgUrl='/images/bg2.jpg', clientX, clientY, bgWidth = 175, bgHeight = 250, width=175, height=300,className = ''}) {
     const baseBgStyle = {
+        backgroundImg: process.env.isProduct ? `/nextjs-blog${bgUrl}` : bgUrl,
         width: `${bgWidth}px`,
         height: `${bgHeight}px`
     }
@@ -17,7 +18,6 @@ export default function Picture({url='/images/avatar2.png', clientX, clientY, bg
     const [imgStyle, setImgStyle] = useState({
         ...baseStyle
     });
-
     
 
     useEffect(() => {
