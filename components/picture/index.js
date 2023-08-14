@@ -3,7 +3,7 @@ import {useState, useEffect} from 'react';
 
 export default function Picture({url='/images/avatar2.png', bgUrl='/images/bg2.jpg', clientX, clientY, bgWidth = 175, bgHeight = 250, width=175, height=300,className = ''}) {
     const baseBgStyle = {
-        backgroundImg: process.env.isProduct ? `/nextjs-blog${bgUrl}` : bgUrl,
+        backgroundImage: process.env.isProduct ? `url('/nextjs-blog${bgUrl}')` : `url('${bgUrl}')`,
         width: `${bgWidth}px`,
         height: `${bgHeight}px`
     }
